@@ -4,7 +4,7 @@ const makeStyles = (colors: any) =>
   StyleSheet.create({
     container: {
       marginVertical: 10,
-      width: '80%',
+      width: '85%',
     },
     errorText: {
       color: 'red',

@@ -10,11 +10,14 @@ const lightColors = {
   primary: 'rgb(255, 45, 85)',
   background: '#ffff',
   text: '#000000',
+  gray:'#161D1D0D'
 };
 const darkColors = {
   primary: 'rgb(255,45,85)',
   background: '#0000',
   text: '#ffffff',
+  gray:'#161D1D0D'
+
 };
 
 export { lightColors, darkColors };

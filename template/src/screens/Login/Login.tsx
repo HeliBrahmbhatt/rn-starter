@@ -15,14 +15,17 @@ import { TextInput } from 'react-native-paper';
 
 import Button from '@src/components/Buttons';
 import Input from '@src/components/Input';
-import images from '@src/config/image';
+import images from '@src/assets/images/image';
 import useTheme from '@src/hooks/useTheme';
 import { AuthStackNavigatorProps } from '@src/types/navigation';
 import makeStyles from './style';
+import makeGlobalStyleSheet from '@src/constants/globalStyle';
 
 const Login = () => {
   const theme = useTheme();
   const styles = makeStyles(theme.colors);
+  const globalStyle = makeGlobalStyleSheet(theme);
+
   const [passVisible, setPassVisible] = useState(false);
   const navigation = useNavigation<AuthStackNavigatorProps>();
 
@@ -45,7 +48,7 @@ const Login = () => {
       />
       <Text style={styles.welcomeText}>{'Welcome to your App'}</Text>
       <Input
-        style={{ marginTop: 20 }}
+        style={styles.inputContainer}
         autoCapitalize="none"
         name="email"
         control={control}
@@ -92,6 +95,23 @@ const Login = () => {
         <Pressable onPress={() => navigation.navigate('SignUp')}>
           <Text style={styles.signUpText}>SignUp</Text>
         </Pressable>
+      </View>
+      <View style={styles.orContainer}>
+        <View style={globalStyle.seperator}></View>
+        <Text style={styles.orTextContainer}>{'OR'}</Text>
+        <View style={globalStyle.seperator}></View>
+      </View>
+      <View style={styles.socialContainer}>
+        <Image
+          source={images.google}
+          style={styles.socialMediaImage}
+          resizeMode="contain"
+        />
+        <Image
+          source={images.facebook}
+          style={styles.socialMediaImage}
+          resizeMode="contain"
+        />
       </View>
     </KeyboardAvoidingView>
   );

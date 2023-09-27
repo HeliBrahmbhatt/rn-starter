@@ -1,4 +1,4 @@
-import images from '@src/config/image';
+import images from '@src/assets/images/image';
 import useTheme from '@src/hooks/useTheme';
 import React from 'react';
 import { useTranslation } from 'react-i18next';
