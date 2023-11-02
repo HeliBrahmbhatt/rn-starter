@@ -69,7 +69,7 @@ const HomeNavigator = () => {
 };
 
 const MainNavigator = () => {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
   return <>{isLoggedIn ? <HomeNavigator /> : <AuthNavigator />}</>;
 };
 export default MainNavigator;
